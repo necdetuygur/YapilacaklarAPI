@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Yapilacaklar.Core.Repositories
 {
-    interface IRepository<TEntity> where TEntity : class
+    public interface IRepository<TEntity> where TEntity : class
     {
         Task<TEntity> GetByIdAsync(int id);
         Task<IEnumerable<TEntity>> GetAllAsync();

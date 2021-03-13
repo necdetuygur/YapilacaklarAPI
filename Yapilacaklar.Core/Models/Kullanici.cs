@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 
 namespace Yapilacaklar.Core.Models
 {
-    class Kullanici
+    public class Kullanici
     {
         public Kullanici()
         {

@@ -3,7 +3,7 @@ using Yapilacaklar.Core.Models;
 
 namespace Yapilacaklar.Core.Repositories
 {
-    interface IYapilacakRepository : IRepository<Yapilacak>
+    public interface IYapilacakRepository : IRepository<Yapilacak>
     {
         Task<Yapilacak> GetWithKullaniciByIdAsync(int YapilacakID);
     }

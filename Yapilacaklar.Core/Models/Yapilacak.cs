@@ -2,7 +2,7 @@
 
 namespace Yapilacaklar.Core.Models
 {
-    class Yapilacak
+    public class Yapilacak
     {
         public int YapilacakID { get; set; }
         public string Baslik { get; set; }
