@@ -12,9 +12,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Yapilacaklar.Core.Repositories;
+using Yapilacaklar.Core.Services;
 using Yapilacaklar.Core.UnitOfWorks;
 using Yapilacaklar.Data;
+using Yapilacaklar.Data.Repositories;
 using Yapilacaklar.Data.UnitOfWorks;
+using Yapilacaklar.Service.Services;
 
 namespace Yapilacaklar.API
 {
@@ -30,6 +34,12 @@ namespace Yapilacaklar.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IService<>), typeof(Service.Services.Service<>));
+            services.AddScoped<IKullaniciService, KullaniciService>();
+            services.AddScoped<IYapilacakService, YapilacakService>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseSqlServer(Configuration["ConnectionStrings:SqlConnectionString"].ToString(), o =>
@@ -37,7 +47,6 @@ namespace Yapilacaklar.API
                     o.MigrationsAssembly("Yapilacaklar.Data");
                 });
             });
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

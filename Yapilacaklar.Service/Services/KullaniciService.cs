@@ -10,7 +10,7 @@ using Yapilacaklar.Core.UnitOfWorks;
 
 namespace Yapilacaklar.Service.Services
 {
-    class KullaniciService : Service<Kullanici>, IKullaniciService
+    public class KullaniciService : Service<Kullanici>, IKullaniciService
     {
         public KullaniciService(IUnitOfWork unitOfWork, IRepository<Kullanici> repository) : base(unitOfWork, repository)
         {
