@@ -37,7 +37,7 @@ namespace Yapilacaklar.API.Controllers
             return Ok(_mapper.Map<KullaniciDto>(kullanici));
         }
 
-        [HttpGet("{id}/yapilacaks")]
+        [HttpGet("{id}/Yapilacaks")]
         public async Task<IActionResult> GetWithYapilacaksByIdAsync(int id)
         {
             var kullaniciWithYapilacakDto = await _kullaniciService.GetWithYapilacaksByIdAsync(id);

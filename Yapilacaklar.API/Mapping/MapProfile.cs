@@ -16,6 +16,9 @@ namespace Yapilacaklar.API.Mapping
 
             CreateMap<YapilacakDto, Yapilacak>();
             CreateMap<Yapilacak, YapilacakDto>();
+
+            CreateMap<YapilacakWithKullaniciDto, Yapilacak>();
+            CreateMap<Yapilacak, YapilacakWithKullaniciDto>();
         }
     }
 }
