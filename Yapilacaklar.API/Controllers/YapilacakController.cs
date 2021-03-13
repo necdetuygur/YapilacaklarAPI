@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace Yapilacaklar.API.Controllers
             _mapper = mapper;
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -27,6 +29,7 @@ namespace Yapilacaklar.API.Controllers
             return Ok(_mapper.Map<IEnumerable<YapilacakDto>>(yapilacaks));
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -34,6 +37,7 @@ namespace Yapilacaklar.API.Controllers
             return Ok(_mapper.Map<YapilacakDto>(yapilacak));
         }
 
+        [Authorize]
         [HttpGet("{id}/Kullanici")]
         public async Task<IActionResult> GetWithKullaniciByIdAsync(int id)
         {
@@ -41,6 +45,7 @@ namespace Yapilacaklar.API.Controllers
             return Ok(_mapper.Map<YapilacakWithKullaniciDto>(yapilacakWithKullanici));
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Save(YapilacakDto yapilacakDto)
         {
@@ -48,6 +53,7 @@ namespace Yapilacaklar.API.Controllers
             return Created(string.Empty, _mapper.Map<YapilacakDto>(newYapilacak));
         }
 
+        [Authorize]
         [HttpPut]
         public IActionResult Update(YapilacakDto yapilacakDto)
         {
@@ -55,6 +61,7 @@ namespace Yapilacaklar.API.Controllers
             return NoContent();
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Remove(int id)
         {
