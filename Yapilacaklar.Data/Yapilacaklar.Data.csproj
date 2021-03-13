@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Yapilacaklar.Core\Yapilacaklar.Core.csproj" />
+  </ItemGroup>
+
 </Project>
