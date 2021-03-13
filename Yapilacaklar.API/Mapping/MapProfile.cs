@@ -10,6 +10,12 @@ namespace Yapilacaklar.API.Mapping
         {
             CreateMap<Kullanici, KullaniciDto>();
             CreateMap<KullaniciDto, Kullanici>();
+
+            CreateMap<KullaniciWithYapilacakDto, Kullanici>();
+            CreateMap<Kullanici, KullaniciWithYapilacakDto>();
+
+            CreateMap<YapilacakDto, Yapilacak>();
+            CreateMap<Yapilacak, YapilacakDto>();
         }
     }
 }
