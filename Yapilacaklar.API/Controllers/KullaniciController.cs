@@ -1,9 +1,6 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Yapilacaklar.API.DTOs;
 using Yapilacaklar.Core.Models;
@@ -37,7 +34,7 @@ namespace Yapilacaklar.API.Controllers
             return Ok(_mapper.Map<KullaniciDto>(kullanici));
         }
 
-        [HttpGet("{id}/yapilacaks")]
+        [HttpGet("{id}/Yapilacaks")]
         public async Task<IActionResult> GetWithYapilacaksByIdAsync(int id)
         {
             var kullaniciWithYapilacakDto = await _kullaniciService.GetWithYapilacaksByIdAsync(id);
