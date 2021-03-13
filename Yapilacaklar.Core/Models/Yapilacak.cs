@@ -9,6 +9,7 @@ namespace Yapilacaklar.Core.Models
         public string Icerik { get; set; }
         public DateTime Tarih { get; set; }
         public bool Yapildi { get; set; }
+        public int KullaniciID { get; set; }
         public virtual Kullanici Kullanici { get; set; }
     }
 }
