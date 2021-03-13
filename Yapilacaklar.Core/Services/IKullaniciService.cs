@@ -5,6 +5,6 @@ namespace Yapilacaklar.Core.Services
 {
     public interface IKullaniciService : IService<Kullanici>
     {
-        Task<Kullanici> GetWithYapilacaklarByIdAsync(int KullaniciID);
+        Task<Kullanici> GetWithYapilacaksByIdAsync(int KullaniciID);
     }
 }

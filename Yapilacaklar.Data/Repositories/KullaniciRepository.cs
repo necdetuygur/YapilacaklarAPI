@@ -12,7 +12,7 @@ namespace Yapilacaklar.Data.Repositories
         {
         }
 
-        public async Task<Kullanici> GetWithYapilacaklarByIdAsync(int KullaniciID)
+        public async Task<Kullanici> GetWithYapilacaksByIdAsync(int KullaniciID)
         {
             return await _appDbContext.Kullanicis.Include(x => x.Yapilacaks).SingleOrDefaultAsync(x => x.KullaniciID == KullaniciID);
         }

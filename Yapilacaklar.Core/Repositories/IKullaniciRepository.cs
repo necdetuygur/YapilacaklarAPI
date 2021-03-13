@@ -5,6 +5,6 @@ namespace Yapilacaklar.Core.Repositories
 {
     public interface IKullaniciRepository : IRepository<Kullanici>
     {
-        Task<Kullanici> GetWithYapilacaklarByIdAsync(int KullaniciID);
+        Task<Kullanici> GetWithYapilacaksByIdAsync(int KullaniciID);
     }
 }

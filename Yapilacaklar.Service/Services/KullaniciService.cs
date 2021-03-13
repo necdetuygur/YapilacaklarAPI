@@ -16,9 +16,9 @@ namespace Yapilacaklar.Service.Services
         {
         }
 
-        public async Task<Kullanici> GetWithYapilacaklarByIdAsync(int KullaniciID)
+        public async Task<Kullanici> GetWithYapilacaksByIdAsync(int KullaniciID)
         {
-            return await _unitOfWork.Kullanicis.GetWithYapilacaklarByIdAsync(KullaniciID);
+            return await _unitOfWork.Kullanicis.GetWithYapilacaksByIdAsync(KullaniciID);
         }
     }
 }
