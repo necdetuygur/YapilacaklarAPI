@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
 using Yapilacaklar.Core.Models;
 
 namespace Yapilacaklar.Data.Seeds

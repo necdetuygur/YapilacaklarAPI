@@ -16,9 +16,9 @@ namespace Yapilacaklar.Data.Seeds
         public void Configure(EntityTypeBuilder<Yapilacak> builder)
         {
             builder.HasData(
-                new Yapilacak { YapilacakID = 1, Baslik = "Un al", Icerik = "Un al", Tarih = DateTime.Now, KullaniciID = _ids[0] },
-                new Yapilacak { YapilacakID = 2, Baslik = "Süt al", Icerik = "Süt al", Tarih = DateTime.Now, KullaniciID = _ids[1] },
-                new Yapilacak { YapilacakID = 3, Baslik = "Yoğurt al", Icerik = "Yoğurt al", Tarih = DateTime.Now, KullaniciID = _ids[2] }
+                new Yapilacak { YapilacakID = 1, Yapildi = false, Baslik = "Un al", Icerik = "Un al", Tarih = DateTime.Now, KullaniciID = _ids[0] },
+                new Yapilacak { YapilacakID = 2, Yapildi = false, Baslik = "Süt al", Icerik = "Süt al", Tarih = DateTime.Now, KullaniciID = _ids[1] },
+                new Yapilacak { YapilacakID = 3, Yapildi = false, Baslik = "Yoğurt al", Icerik = "Yoğurt al", Tarih = DateTime.Now, KullaniciID = _ids[2] }
             );
         }
     }
