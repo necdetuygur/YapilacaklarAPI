@@ -10,9 +10,9 @@ namespace Yapilacaklar.Data.Repositories
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        public readonly DbContext _context;
+        public readonly AppDbContext _context;
         public readonly DbSet<TEntity> _dbSet;
-        public Repository(DbContext context)
+        public Repository(AppDbContext context)
         {
             _context = context;
             _dbSet = context.Set<TEntity>();
