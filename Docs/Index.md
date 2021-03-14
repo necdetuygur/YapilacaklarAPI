@@ -40,6 +40,8 @@ Bunlar sırasıyla
 <br>3. Service
 <br>4. API
 
+gibidir.
+
 ### Core Katmanı
 Model'lerin (Entity'lerin) ve Interface'lerin bulunduğu katmandır.
 Bu katman hiç bir katmandan referans almaz. Tüm katmanlar bu katmanı referans alır.
@@ -65,14 +67,14 @@ Bu katman tüm alt katmanları referans alır, kullanır.
 <br>1. Kullanıcılar.
 <br>2. Kullanıcılara bağlı, Yapılacaklar.
 
-## Kullanıcıların
+## Kullanıcılar'ın
 - KullaniciID
 - Ad
 - Soyad
 
 nitelikleri vardır.
 
-## Yapılacakların
+## Yapılacaklar'ın
 - YapilacakID
 - Baslik
 - Icerik
