@@ -1,5 +1,14 @@
 # ASP.NET Core Web API & MSSQL & Swagger
 
+### Kullanılan Teknolojiler
+- .Net Core 5
+- Repository
+- UnitOfWork
+- Entity Framework
+- Injection
+- Swagger (Authentication mevcut)
+- Veritabanı MSSQL
+
 ### Projeye Genel Bakış
 ![Solution](Solution.png "Solution")
 

@@ -2,6 +2,15 @@
 
 Teknik dökümana ulaşmak için <a href="Docs/Index.md">tıklayınız</a>.
 
+### Kullanılan Teknolojiler
+- .Net Core 5
+- Repository
+- UnitOfWork
+- Entity Framework
+- Injection
+- Swagger (Authentication mevcut)
+- Veritabanı MSSQL
+
 ### Settings (appsettings.json)
 ```
 Connection String:
