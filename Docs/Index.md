@@ -1,7 +1,7 @@
 # ASP.NET Core Web API & MSSQL & Swagger
 
 ### Projeye Genel Bakış
-![Solution](Solution.jpg "Solution")
+![Solution](Solution.png "Solution")
 
 ### Proje başlatıldığında görünecek olan Swagger ekranı
 ![Swagger](Swagger.jpg "Swagger")
