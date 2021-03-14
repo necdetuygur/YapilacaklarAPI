@@ -1,5 +1,7 @@
 # ASP.NET Core Web API & MSSQL & Swagger
 
+Teknik dökümana ulaşmak için <a href="Docs/Index.md">tıklayınız</a>.
+
 ### Settings (appsettings.json)
 ```
 Connection String:
@@ -13,11 +15,10 @@ Swagger Basic Authentication Password:
     Default: Necdet2021
 ```
 ### Database
-![YapilacaklarDB](YapilacaklarDB.jpg "YapilacaklarDB")
+![YapilacaklarDB](Docs/YapilacaklarDB.jpg "YapilacaklarDB")
 
 ### Commands
 ```
 Add-Migration Initial
 Update-Database
 ```
-
