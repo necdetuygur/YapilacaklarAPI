@@ -31,3 +31,9 @@ Swagger Basic Authentication Password:
 Add-Migration Initial
 Update-Database
 ```
+
+### Mac / Linux / Rider
+```
+cd ./RentACar.API
+dotnet ef database update
+```
