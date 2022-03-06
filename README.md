@@ -34,6 +34,6 @@ Update-Database
 
 ### Mac / Linux / Rider
 ```
-cd ./RentACar.API
+cd ./Yapilacaklar.API
 dotnet ef database update
 ```
