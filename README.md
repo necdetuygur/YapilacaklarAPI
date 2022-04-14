@@ -34,6 +34,7 @@ Update-Database
 
 ### Mac / Linux / Rider
 ```
+dotnet tool install --global dotnet-ef
 cd ./Yapilacaklar.API
 dotnet ef database update
 ```
