@@ -76,6 +76,8 @@ heroku container:release web --app yapilacaklarapi
 heroku logs --tail --app yapilacaklarapi
 ```
 
+[https://yapilacaklarapi.herokuapp.com/swagger](https://yapilacaklarapi.herokuapp.com/swagger)
+
 [https://yapilacaklarapi.herokuapp.com/api/Kullanici](https://yapilacaklarapi.herokuapp.com/api/Kullanici)
 
 ![Heroku](README_herokutest.jpg)
