@@ -1,7 +1,9 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Yapilacaklar.Core.Models
 {
+    [Table("Yapilacak", Schema = "dbo")]
     public class Yapilacak
     {
         public int YapilacakID { get; set; }

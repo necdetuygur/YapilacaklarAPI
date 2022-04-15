@@ -9,16 +9,19 @@ namespace Yapilacaklar.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-
         }
+
         public DbSet<Yapilacak> Yapilacaks { get; set; }
         public DbSet<Kullanici> Kullanicis { get; set; }
+        public DbSet<BlogPost> BlogPosts { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder); // Foreign keylerde
             modelBuilder.ApplyConfiguration(new YapilacakConfiguration());
             modelBuilder.ApplyConfiguration(new KullaniciConfiguration());
-            modelBuilder.ApplyConfiguration(new YapilacakSeed(new int[] { 1, 2, 3 }));
-            modelBuilder.ApplyConfiguration(new KullaniciSeed(new int[] { 1, 2, 3 }));
+            modelBuilder.ApplyConfiguration(new YapilacakSeed(new int[] {1, 2, 3}));
+            modelBuilder.ApplyConfiguration(new KullaniciSeed(new int[] {1, 2, 3}));
         }
     }
 }

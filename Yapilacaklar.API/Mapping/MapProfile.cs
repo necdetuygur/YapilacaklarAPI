@@ -19,6 +19,9 @@ namespace Yapilacaklar.API.Mapping
 
             CreateMap<YapilacakWithKullaniciDto, Yapilacak>();
             CreateMap<Yapilacak, YapilacakWithKullaniciDto>();
+            
+            CreateMap<BlogPost, BlogPostDto>();
+            CreateMap<BlogPostDto, BlogPost>();
         }
     }
 }

@@ -29,7 +29,6 @@ namespace Yapilacaklar.Service.Services
             await _repository.AddRangeAsync(entities);
             await _unitOfWork.CommitAsync();
             return entities;
-
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()

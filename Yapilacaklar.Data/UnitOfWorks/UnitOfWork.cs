@@ -10,6 +10,7 @@ namespace Yapilacaklar.Data.UnitOfWorks
         private readonly AppDbContext _context;
         private YapilacakRepository _yapilacakRepository;
         private KullaniciRepository _kullaniciRepository;
+        private BlogPostRepository _blogPostRepository;
 
         public UnitOfWork(AppDbContext appDbContext)
         {
@@ -19,6 +20,7 @@ namespace Yapilacaklar.Data.UnitOfWorks
         public IYapilacakRepository Yapilacaks => _yapilacakRepository = _yapilacakRepository ?? new YapilacakRepository(_context);
 
         public IKullaniciRepository Kullanicis => _kullaniciRepository = _kullaniciRepository ?? new KullaniciRepository(_context);
+        public IBlogPostRepository BlogPosts => _blogPostRepository = _blogPostRepository ?? new BlogPostRepository(_context);
 
         public void Commit()
         {

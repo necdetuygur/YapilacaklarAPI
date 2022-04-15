@@ -7,6 +7,7 @@ namespace Yapilacaklar.Core.UnitOfWorks
     {
         IYapilacakRepository Yapilacaks { get; }
         IKullaniciRepository Kullanicis { get; }
+        IBlogPostRepository BlogPosts { get; }
         Task CommitAsync();
         void Commit();
     }

@@ -35,6 +35,7 @@ namespace Yapilacaklar.API
             services.AddScoped(typeof(IService<>), typeof(Service.Services.Service<>));
             services.AddScoped<IKullaniciService, KullaniciService>();
             services.AddScoped<IYapilacakService, YapilacakService>();
+            services.AddScoped<IBlogPostService, BlogPostService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddDbContext<AppDbContext>(options =>
