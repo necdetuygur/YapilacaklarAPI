@@ -65,7 +65,7 @@ ON [PRIMARY]
 GO
 ```
 
-### HEROKU DEPLOY
+### Heroku Deploy
 ```
 docker build -t y1:v1 .
 docker run -p 81:80 y1:v1
