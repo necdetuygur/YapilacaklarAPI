@@ -23,18 +23,44 @@ Swagger Basic Authentication Password:
     BasicAuthentication.Password
     Default: Necdet2021
 ```
+
 ### Database
 ![YapilacaklarDB](Docs/YapilacaklarDB.jpg "YapilacaklarDB")
 
-### Commands
+### PM Commands
 ```
+CODE FIRST:
 Add-Migration Initial
 Update-Database
+
+DATABASE FIRST:
+Scaffold-DbContext "Server=XXX; Database=XXX; User ID=XXX; Password=XXX;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entities
 ```
 
-### Mac / Linux / Rider
+### Mac / Linux / Rider / BASH
 ```
+CODE FIRST:
 dotnet tool install --global dotnet-ef
 cd ./Yapilacaklar.API
 dotnet ef database update
+
+DATABASE FIRST:
+cd ./Yapilacaklar.API
+dotnet ef dbcontext scaffold "Server=XXX;Database=XXX;User ID=XXX;Password=XXX;" Microsoft.EntityFrameworkCore.SqlServer -o Entities -t BlogPost
+```
+
+### BlogPost Tablo
+```sql
+CREATE TABLE [dbo].[BlogPost] ( 
+    [BlogPostID]  int IDENTITY(1,1) NOT NULL,
+    [Baslik] nvarchar(max) NULL,
+    [Icerik] nvarchar(max) NULL,
+    CONSTRAINT [PK_BlogPost] PRIMARY KEY CLUSTERED([BlogPostID])
+    WITH FILLFACTOR = 80 ON [PRIMARY])
+ON [PRIMARY]
+    TEXTIMAGE_ON [PRIMARY]
+    WITH (
+        DATA_COMPRESSION = NONE
+    )
+GO
 ```
